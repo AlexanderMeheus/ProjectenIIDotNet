@@ -1,0 +1,39 @@
+﻿/*Overschrijf opmaak bootstrap*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container.body-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 1200px){
+    .container { max-width: 100%;}
+}
+@media (min-width: 992px){
+    .container {max-width: 100%;}
+}
+@media (min-width: 768px){
+    .container {max-width: 100%;}
+}
+
+
+.row {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 50px;
+}
+
+.vragenEersteGraadOpgave {
+    padding: 20px 10% 40px 10%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+.vragenEersteGraadOpgave h2 {
+    color: white;
+    text-align: center;
+}

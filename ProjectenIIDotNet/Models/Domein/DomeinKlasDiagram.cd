@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ProjectenIIDotNet.Models.Domein.Leerling">
+    <Position X="5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAABAAQAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Leerling.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Graad" />
+      <Property Name="Jaar" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Continent">
+    <Position X="2.5" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAQAAAAAAABABAAAAAAAAAAAACAAAAAAI=</HashCode>
+      <FileName>Models\Domein\Continent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Landen" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Land">
+    <Position X="7.75" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQEAAAAAAABAAABAAAAAABAAAAAAAAQAI=</HashCode>
+      <FileName>Models\Domein\Land.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Continent" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Locaties" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Klimatogram">
+    <Position X="5.25" Y="6.25" Width="10.25" />
+    <AssociationLine Name="MaandGegevens" Type="ProjectenIIDotNet.Models.Domein.MaandGegevens" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="6.625" />
+        <Point X="20.062" Y="6.625" />
+        <Point X="20.062" Y="5.574" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.131" Y="0.112" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACABAAABAAAAAAAAAwAQAAAAAAAAAAACAAAQACAAAAA=</HashCode>
+      <FileName>Models\Domein\Klimatogram.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaandGegevens" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Locatie">
+    <Position X="13.5" Y="3.25" Width="2" />
+    <AssociationLine Name="Land" Type="ProjectenIIDotNet.Models.Domein.Land" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.375" />
+        <Point X="13.125" Y="4.375" />
+        <Point X="13.125" Y="4.476" />
+        <Point X="11" Y="4.476" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAABAAAAAAABAAAgAAAAAAAAgAAAAAAAAI=</HashCode>
+      <FileName>Models\Domein\Locatie.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Klimatogram" />
+      <Property Name="Land" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Node">
+    <Position X="16.25" Y="15.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAGAAAAAAgAIAABAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.VraagNode">
+    <Position X="13.5" Y="19.25" Width="4" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Node" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.653" Y="18.073" />
+        <Point X="16.653" Y="18.875" />
+        <Point X="17.188" Y="18.875" />
+        <Point X="17.188" Y="19.25" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="JaKind" Type="ProjectenIIDotNet.Models.Domein.Determinatie.Node" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="19.25" />
+        <Point X="15.5" Y="17" />
+        <Point X="16.25" Y="17" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="NeeKind" Type="ProjectenIIDotNet.Models.Domein.Determinatie.Node" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.688" Y="19.25" />
+        <Point X="14.688" Y="16.313" />
+        <Point X="16.25" Y="16.313" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Vraag" Type="ProjectenIIDotNet.Models.Domein.Determinatie.DeterminatieVraag" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.063" Y="19.25" />
+        <Point X="14.063" Y="17.312" />
+        <Point X="11.5" Y="17.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAABAAAAAAEAAAAAAAAMAAACAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\VraagNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JaKind" />
+      <Property Name="NeeKind" />
+      <Property Name="Vraag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.KenmerkNode">
+    <Position X="18.25" Y="19.25" Width="4" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Node" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.331" Y="18.073" />
+        <Point X="19.331" Y="18.875" />
+        <Point X="18.964" Y="18.875" />
+        <Point X="18.964" Y="19.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\KenmerkNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kenmerk" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Kenmerk">
+    <Position X="18.25" Y="21.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Kenmerk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.DeterminatieTree">
+    <Position X="16" Y="10.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAQACASAAhAAAQAgEQAAAAAAAAGAACgAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\DeterminatieTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Root" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking">
+    <Position X="7.75" Y="13.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAQAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\Vergelijking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.GelijkAan" Collapsed="true">
+    <Position X="3.75" Y="11.5" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="11.846" />
+        <Point X="5.75" Y="11.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\GelijkAan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.GroterDan" Collapsed="true">
+    <Position X="3.75" Y="12.25" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="12.596" />
+        <Point X="5.75" Y="12.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\GroterDan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.GroterDanOfGelijkAan" Collapsed="true">
+    <Position X="3.75" Y="13" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="13.346" />
+        <Point X="5.75" Y="13.346" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\GroterDanOfGelijkAan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.KleinerDanOfGelijkAan" Collapsed="true">
+    <Position X="3.75" Y="13.75" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="14.096" />
+        <Point X="5.75" Y="14.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\KleinerDanOfGelijkAan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.NietGelijkAan" Collapsed="true">
+    <Position X="3.75" Y="14.5" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="14.894" />
+        <Point X="5.75" Y="14.894" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\NietGelijkAan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.KleinerDan" Collapsed="true">
+    <Position X="3.75" Y="15.25" Width="2" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.Vergelijking" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="14.596" />
+        <Point X="7.375" Y="14.596" />
+        <Point X="7.375" Y="15.596" />
+        <Point X="5.75" Y="15.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\KleinerDan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.ConstanteWaardeParameter">
+    <Position X="7.75" Y="21.75" Width="4" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.3" />
+        <Point X="7.037" Y="20.3" />
+        <Point X="7.037" Y="22.99" />
+        <Point X="7.75" Y="22.99" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAACAAAAAQAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\ConstanteWaardeParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.TemperatuurKoudsteMaandParameter" Collapsed="true">
+    <Position X="2.5" Y="21" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.3" />
+        <Point X="6.401" Y="20.3" />
+        <Point X="6.401" Y="21.346" />
+        <Point X="5.25" Y="21.346" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\TemperatuurKoudsteMaandParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.TotaleJaarNeerslagParameter" Collapsed="true">
+    <Position X="2.5" Y="21.75" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.333" />
+        <Point X="6.401" Y="20.333" />
+        <Point X="6.401" Y="22.096" />
+        <Point X="5.25" Y="22.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\TotaleJaarNeerslagParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.GemiddeldeJaarTemperatuurParameter" Collapsed="true">
+    <Position X="2.5" Y="22.5" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.39" />
+        <Point X="7.12" Y="20.39" Type="JumpStart" />
+        <Point X="6.954" Y="20.39" Type="JumpEnd" />
+        <Point X="6.401" Y="20.39" />
+        <Point X="6.401" Y="22.846" />
+        <Point X="5.25" Y="22.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\GemiddeldeJaarTemperatuurParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalDrogeMaandenParameter" Collapsed="true">
+    <Position X="2.5" Y="24.75" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.333" />
+        <Point X="6.391" Y="20.333" />
+        <Point X="6.391" Y="25.096" />
+        <Point X="5.25" Y="25.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\AantalDrogeMaandenParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.NeerslagZomerParameter" Collapsed="true">
+    <Position X="2.5" Y="24" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.333" />
+        <Point X="6.411" Y="20.333" />
+        <Point X="6.411" Y="24.346" />
+        <Point X="5.25" Y="24.346" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\NeerslagZomerParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.NeerslagWinterParameter" Collapsed="true">
+    <Position X="2.5" Y="23.25" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.3" />
+        <Point X="6.417" Y="20.3" />
+        <Point X="6.417" Y="23.596" />
+        <Point X="5.25" Y="23.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\NeerslagWinterParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.TemperatuurWarmsteMaandParameter" Collapsed="true">
+    <Position X="2.5" Y="20.25" Width="2.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.333" />
+        <Point X="6.391" Y="20.333" />
+        <Point X="6.391" Y="20.783" />
+        <Point X="5.25" Y="20.783" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\TemperatuurWarmsteMaandParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.MaandGegevens">
+    <Position X="16.75" Y="3.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\MaandGegevens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter">
+    <Position X="8.25" Y="19.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIAAAAAACAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\Parameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenMetTemperatuurParameter" Collapsed="true">
+    <Position X="2.5" Y="18.75" Width="3.25" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenParameter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.27" Y="18.704" />
+        <Point X="2.27" Y="19" />
+        <Point X="2.5" Y="19" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\AantalMaandenMetTemperatuurParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenMetNeerslagParameter" Collapsed="true">
+    <Position X="2.5" Y="19.5" Width="3.25" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenParameter" FixedFromPoint="true">
+      <Path>
+        <Point X="2.27" Y="18.704" />
+        <Point X="2.27" Y="19.846" />
+        <Point X="2.5" Y="19.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\AantalMaandenMetNeerslagParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenParameter">
+    <Position X="1.75" Y="16.25" Width="4.75" />
+    <InheritanceLine Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="20.3" />
+        <Point X="7.375" Y="20.3" />
+        <Point X="7.375" Y="17.584" />
+        <Point X="6.5" Y="17.584" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIACAAAAEAAAAAQAAAgAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\AantalMaandenParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.VraagFactoryEersteGraad">
+    <Position X="23" Y="1" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\VraagFactoryEersteGraad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.VraagEersteGraad">
+    <Position X="27.5" Y="1" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\VraagEersteGraad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.WarmsteMaandVraag">
+    <Position X="24.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\WarmsteMaandVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.TemperatuurWarmsteMaandVraag">
+    <Position X="23.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\TemperatuurWarmsteMaandVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.KoudsteMaandVraag">
+    <Position X="31.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\KoudsteMaandVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.TemperatuurKoudsteMaandVraag">
+    <Position X="31.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\TemperatuurKoudsteMaandVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.AantalDrogeMaandenVraag">
+    <Position X="28.25" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\AantalDrogeMaandenVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.NeerslagZomerVraag">
+    <Position X="26" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\NeerslagZomerVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.VragenEersteGraad.NeerslagWinterVraag">
+    <Position X="31.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\VragenEersteGraad\NeerslagWinterVraag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.DeterminatieVraag">
+    <Position X="8.5" Y="16.5" Width="3" />
+    <AssociationLine Name="Parameter1" Type="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.Parameter" FixedFromPoint="true">
+      <Path>
+        <Point X="9.5" Y="18.44" />
+        <Point X="9.5" Y="19.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACCAAEAAABgAAAAAAAAAAAAEAAAQAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\DeterminatieVraag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parameter1" />
+      <Property Name="Parameter2" />
+      <Property Name="Vergelijking" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.VergelijkingFactory">
+    <Position X="7.75" Y="11.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\VergelijkingFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.ParameterFactory">
+    <Position X="7.75" Y="24.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AEAAhAAAAAAQAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\ParameterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Graad">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Graad.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Jaar">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Jaar.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Maand">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQAAAAJAABAAAQAAAEAAAQAAAAAIAAAAAEAAA=</HashCode>
+      <FileName>Models\Domein\Maanden.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Determinatie.Vergelijkingen.VergelijkingenEnum">
+    <Position X="12.75" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Vergelijkingen\VergelijkingenEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.SimpeleParameterEnum">
+    <Position X="12.5" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAYQABAAAAAAAAACAAQAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\SimpeleParameterEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectenIIDotNet.Models.Domein.Determinatie.Parameters.AantalMaandenParameterEnum">
+    <Position X="12.5" Y="24.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domein\Determinatie\Parameters\AantalMaandenParameterEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

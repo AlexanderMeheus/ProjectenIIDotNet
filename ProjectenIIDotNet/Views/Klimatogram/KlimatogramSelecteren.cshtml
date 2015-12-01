@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Klimatogram Opvragen";
+}
+@Styles.Render("~/Content/klimatogramOpvragen.css")
+@if (ViewBag.Graad.Equals("graad1"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG1.css")
+}
+else if (ViewBag.Graad.Equals("graad2") && ViewBag.Jaar.Equals("jaar1"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG2J1.css")
+}
+else if (ViewBag.Graad.Equals("graad2") && ViewBag.Jaar.Equals("jaar2"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG2J2.css")
+}
+
+<div class="continentMenu">
+    <div class="title">
+        <h1>Klimatogram opvragen</h1>
+        <h3></h3>
+    </div>
+    <div class="flex">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div id="kaart">
+
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
+
+
+@section scripts
+{
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script>
+    <script src="~/Scripts/CustomScripts/KiesKlimatogram.js"></script>
+}
+

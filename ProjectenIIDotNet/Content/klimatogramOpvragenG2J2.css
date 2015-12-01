@@ -1,0 +1,29 @@
+﻿.title {
+    background-color: sandybrown;
+}
+
+.continentMenu {
+    background-color: sandybrown; /*specifiek per graad*/
+}
+
+.continentButton a:link, .continentButton a:visited {
+    color: sandybrown;
+}
+
+/*Niet specifiek per graad maar moet in deze stylesheet anders zal kleur tekst niet wijzigen bij hover*/
+.continentButton a:hover {
+    color: darkgrey;
+}
+
+.landButton a {
+    background-color: sandybrown;
+}
+
+/*Determinatiemenu*/
+.determinatiaMenu {
+    background-color: sandybrown;
+}
+
+#VraagContent a {
+    background-color: sandybrown;
+}

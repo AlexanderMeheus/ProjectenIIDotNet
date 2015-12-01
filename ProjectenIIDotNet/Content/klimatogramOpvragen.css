@@ -1,0 +1,113 @@
+﻿/**************************************/
+/**************************************/
+/**   Deze stylesheet definieert     **/
+/**       enkel de opmaak die        **/
+/**        van toepassing is         **/
+/**    op alle graden en jaren bij   **/
+/**   KlimatogramOpvragen.cshtml     **/
+/**       voor opmaak specifiek      **/
+/**        per graad of jaar zie     **/  
+/** klimatogramOpvragenGraad---.css  **/
+/**************************************/
+
+/*Override opmaak bootstrap*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container.body-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 1200px){
+    .container { max-width: 100%;}
+}
+@media (min-width: 992px){
+    .container {max-width: 100%;}
+}
+@media (min-width: 768px){
+    .container {max-width: 100%;}
+}
+
+.kaart {
+    width: 700px;
+    display: none;
+    margin: auto;
+    padding-top: 40px;
+}
+
+/*Start continent menu*/
+
+.continentMenu {
+    padding: 20px 10% 40px 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    justify-content: -webkit-space-around;
+    justify-content: -ms-space-around;
+}
+
+.continentMenu .flex {
+    margin-top: 40px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+}
+
+.continentButton {
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.continentButton a {
+    display: block;
+    width: 70%;
+    padding: 30% 0 30% 0;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.continentButton a:hover {
+    text-decoration: none;
+    background-color: gainsboro;
+}
+
+/*Start landmenu*/
+.landMenu {
+    
+}
+
+.landButton {
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.landButton a {
+    display: block;
+    width: 70%;
+    padding: 30% 0 30% 0;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.landButton a:hover {
+    text-decoration: none;
+    background-color: gainsboro;
+}

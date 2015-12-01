@@ -1,0 +1,34 @@
+﻿@using ProjectenIIDotNet.Models.Domein
+@{
+    ViewBag.Title = "Klimatogrammen determineren";
+}
+@Styles.Render("~/Content/graadMenu.css")
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="row">
+    
+    <div class="col-md-3">
+        <div class="button">
+            <p>
+                @Html.ActionLink("Graad 1", "StartApplicatie", new {Graad = Graad.graad1, Jaar = Jaar.jaar1})
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="button">
+            <p><a href="@Url.Action("StartApplicatie", "Home", new { Graad = Graad.graad2, Jaar = Jaar.jaar1 })">Graad 2<br />Jaar 1</a></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="button">
+            <p><a href="@Url.Action("StartApplicatie", "Home", new { Graad = Graad.graad2, Jaar = Jaar.jaar2 })">Graad 2<br/>Jaar 2</a></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="button">
+            <p>
+                @Html.ActionLink("Graad 3", "StartApplicatie", new { Graad = Graad.graad3, Jaar = Jaar.jaar1 })
+            </p>
+        </div>
+    </div>
+</div>
+

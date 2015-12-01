@@ -1,0 +1,109 @@
+﻿@using ProjectenIIDotNet.Models.Domein
+@model ProjectenIIDotNet.ViewModels.VragenEersteGraadViewModel
+@Styles.Render("~/Content/vragenEersteGraad.css")
+@{
+    ViewBag.Title = "Vragen klimatogram oplossen";
+}
+<div class="vragenEersteGraadOpgave">
+    <h2>Los onderstaande vragen op aan de hand van het klimatogram:</h2>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.WarmsteMaandVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.EnumDropDownListFor(model => model.WarmsteMaandVraag, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.WarmsteMaandVraag, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TemperatuurWarmsteMaandVraag, htmlAttributes: new {@class = "control-label"})
+                    <div>
+                        @Html.DropDownListFor(model => model.TemperatuurWarmsteMaandVraag, new SelectList(ViewBag.AntwoordenTemperatuurWarmsteMaand, this), htmlAttributes: new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.TemperatuurWarmsteMaandVraag, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.KoudsteMaandVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.EnumDropDownListFor(model => model.KoudsteMaandVraag, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.KoudsteMaandVraag, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TemperatuurKoudsteMaandVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.DropDownListFor(model => model.TemperatuurKoudsteMaandVraag, new SelectList(ViewBag.AntwoordenTemperatuurKoudsteMaand), htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TemperatuurKoudsteMaandVraag, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AantalDrogeMaandenVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.DropDownListFor(model => model.AantalDrogeMaandenVraag, new SelectList(ViewBag.AntwoordenAantalDrogeMaanden, this), htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AantalDrogeMaandenVraag, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NeerslagZomerVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.EditorFor(model => model.NeerslagZomerVraag, new { HtmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NeerslagZomerVraag, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NeerslagWinterVraag, htmlAttributes: new { @class = "control-label" })
+                    <div>
+                        @Html.EditorFor(model => model.NeerslagWinterVraag, new { HtmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NeerslagWinterVraag, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Indienen" class="btn btn-default" />
+                </div>
+            </div>
+        }
+    </div>
+
+    <div id="Klimatogram" class="col-md-8">
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/go-debug.js"></script>
+    <script src="~/Scripts/highcharts.js"></script>
+    <script src="~/Scripts/CustomScripts/ToonKlimatogramEnDeterminatie.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,94 @@
+﻿
+.determineerTabel {
+    display: block;
+    opacity: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.visuallyhidden {
+    opacity: 0;
+}
+
+/*Overschrijf opmaak bootstrap*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container.body-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 1200px){
+    .container { max-width: 100%;}
+}
+@media (min-width: 992px){
+    .container {max-width: 100%;}
+}
+@media (min-width: 768px){
+    .container {max-width: 100%;}
+}
+
+/*Opmaak*/
+.row {
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 50px;
+}
+
+.determinatiaMenu {
+    padding: 20px 10% 40px 10%;
+    width: 100%;
+}
+
+.determinatiaMenu h1, .determinatiaMenu h4 {
+    color: white;
+    text-align: center;
+}
+
+#VraagContent {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#VraagContent p {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#VraagContent a {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    color: white;
+}
+
+#werkgebied {
+    text-align: center;
+}
+
+#fotoVegetatie img{
+    margin: auto;
+    width: 100%;
+}
+
+#kenmerk {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}

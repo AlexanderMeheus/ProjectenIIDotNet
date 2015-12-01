@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Determineren";
+}
+@Styles.Render("~/Content/determineren.css")
+@if (ViewBag.Graad.Equals("graad1"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG1.css")
+}
+else if (ViewBag.Graad.Equals("graad2") && ViewBag.Jaar.Equals("jaar1"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG2J1.css")
+}
+else if (ViewBag.Graad.Equals("graad2") && ViewBag.Jaar.Equals("jaar2"))
+{
+    @Styles.Render("~/Content/klimatogramOpvragenG2J2.css")
+}
+
+<div class="determinatiaMenu">
+    <div class="title">
+        <h1>Determineren</h1>
+        <h4>Determineer onderstaand klimatogram aan de hand van de determinatietabel</h4>
+    </div>
+    <div class="flex">
+
+    </div>
+</div>
+
+<div class="row">
+    <div id="Klimatogram" class="col-md-6">
+
+    </div>
+    <div id="DeterminatieTree" class="col-md-6">
+
+    </div>
+</div>
+<div class="row">
+    <div id="werkgebied" class="col-md-12">
+        
+    </div>
+</div>
+
+<script>
+    var graad = '@(ViewBag.Graad)';
+    var jaar = '@(ViewBag.Jaar)';
+</script>
+
+@section scripts
+{
+    <script src="~/Scripts/go.js"></script>
+    <script src="~/Scripts/highcharts.js"></script>
+    <script src="~/Scripts/CustomScripts/ToonKlimatogramEnDeterminatie.js"></script>
+}

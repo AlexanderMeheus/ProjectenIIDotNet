@@ -1,0 +1,210 @@
+﻿/****************************/
+ /********Graad menu*********/
+ /***************************/
+
+ /****Algmeen****/
+    .button {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: lightblue;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    .button p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .button p a {
+        display: block;
+    }
+
+    .row .col-md-3:nth-child(2) .button { background-color: darkkhaki; }
+
+    .row .col-md-3:nth-child(3) .button { background-color: sandybrown; }
+
+    .row .col-md-3:last-child .button { background-color: salmon; }
+
+    .row .col-md-3 .button:hover {
+        background-color: gainsboro;
+    }
+
+    .button p a:link, .button p a:visited{
+        color: white;
+        text-decoration: none;
+    }
+
+    .button p a:hover {
+        color: darkgrey;
+    }
+
+/**Opmaak mobile**/
+    @media (max-width: 768px) {
+        .col-md-3 {
+            width: 44%;
+            margin: 3%;
+            float: left;
+        }
+
+        .button p a {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            padding-top: 40px;
+        }
+
+        .row .col-md-3:nth-child(2) .button p a, .row .col-md-3:nth-child(3) .button p a{ padding-top: 30px; }
+
+        .row .col-md-3:first-child {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveLeftUp;
+            -webkit-animation-name: moveLeftUp;
+        }
+
+        @-webkit-keyframes moveLeftUp {
+            from { -webkit-transform: translate(57%, 62px); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+        @keyframes moveLeftUp {
+            from { transform: translate(57%, 62px); }
+            to { transform: rotate(0deg); }
+        }
+
+        .row .col-md-3:nth-child(2) {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveRightUp;
+            -webkit-animation-name: moveRightUp;
+        }
+
+        @-webkit-keyframes moveRightUp {
+            from {-webkit-transform: translate(-57%, 62px); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+
+        @keyframes moveRightUp {
+            from { transform: translate(-57%, 62px); }
+            to { transform: rotate(0deg); }
+        }
+
+        .row .col-md-3:nth-child(3) {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveLeftDown;
+            -webkit-animation-name: moveLeftDown;
+        }
+
+        @-webkit-keyframes moveLeftDown {
+            from { -webkit-transform: translate(57%, -62px); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+        @keyframes moveLeftDown {
+            from { transform: translate(57%, -62px); }
+            to { transform: rotate(0deg); }
+        }
+
+        .row .col-md-3:last-child {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveRightDown;
+            -webkit-animation-name: moveRightDown;
+        }
+
+        @-webkit-keyframes moveRightDown {
+            from { -webkit-transform: translate(-57%, -62px); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+        @keyframes moveRightDown {
+            from { transform: translate(-57%, -62px); }
+            to { transform: rotate(0deg); }
+        }
+    }
+
+    /**Opmaak desktop**/
+    @media (min-width: 768px) {
+        body {
+            background-size: 100%;
+            background-image: url(../images/background2.png);
+            background-repeat: no-repeat;
+        }
+
+        .row { margin-bottom: 43%; }
+
+        .button {
+            margin: auto;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+        }
+
+        .button p a {
+            width: 140px;
+            height: 140px;
+            border-radius: 140px;
+            padding-top: 60px;
+        }
+
+        .row .col-md-3:nth-child(2) .button p a, .row .col-md-3:nth-child(3) .button p a { padding-top: 47px; }
+
+        .row .col-md-3:nth-child(2) {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveRight1;
+            -webkit-animation-name: moveRight1;
+        }
+
+        @-webkit-keyframes moveRight1 {
+            from { -webkit-transform: translateX(-260px) rotate(-180deg); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+
+        @keyframes moveRight1 {
+            from { transform: translateX(-260px) rotate(-180deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        .row .col-md-3:nth-child(3) {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveRight2;
+            -webkit-animation-name: moveRight2;
+        }
+
+        @-webkit-keyframes moveRight2 {
+            from { -webkit-transform: translateX(-520px) rotate(-180deg); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+
+        @keyframes moveRight2 {
+            from { transform: translateX(-520px) rotate(0deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        .row .col-md-3:nth-child(4) {
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-name: moveRight3;
+            -webkit-animation-name: moveRight3;
+        }
+
+        @-webkit-keyframes moveRight3 {
+            from { -webkit-transform: translateX(-780px) rotate(-180deg); }
+            to { -webkit-transform: rotate(0deg); }
+        }
+
+
+        @keyframes moveRight3 {
+            from { transform: translateX(-780px) rotate(-180deg); }
+            to { transform: rotate(0deg); }
+        }
+    }

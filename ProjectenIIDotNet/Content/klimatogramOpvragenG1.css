@@ -1,0 +1,29 @@
+﻿.title {
+    background-color: lightblue;
+}
+
+.continentMenu {
+    background-color: lightblue; /*specifiek per graad*/
+}
+
+.continentButton a:link, .continentButton a:visited {
+    color: lightblue;
+}
+
+/*Niet specifiek per graad maar moet in deze stylesheet anders zal kleur tekst niet wijzigen bij hover*/
+.continentButton a:hover {
+    color: darkgrey;
+}
+
+.landButton a {
+    background-color: lightblue;
+}
+
+/*Determinatie*/
+.determinatiaMenu {
+    background-color: lightblue;
+}
+
+#VraagContent a {
+    background-color: lightblue;
+}

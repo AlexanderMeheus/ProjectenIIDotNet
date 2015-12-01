@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Klimatogram";
+}
+
+<div id="Klimatogram">
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="button">
+            <p>
+                @Html.ActionLink("Determineren", "Index", "Determinatie")
+            </p>
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script src="~/Scripts/go-debug.js"></script>
+    <script src="~/Scripts/highcharts.js"></script>
+    <script src="~/Scripts/CustomScripts/ToonKlimatogramEnDeterminatie.js"></script>
+}
